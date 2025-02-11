@@ -27,4 +27,12 @@ def fetch_word():
     word = response.json()[0]
     return word
 
-print(fetch_word())
+# generate weaker but more memorable password
+def generate_weaker_password():
+    word1 = fetch_word()
+    word2 = fetch_word()
+    password = word1 + word2
+    return password
+
+
+print(generate_weaker_password())
